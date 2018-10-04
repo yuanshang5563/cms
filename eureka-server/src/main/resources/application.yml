@@ -2,11 +2,19 @@ server:
   port: 8761
 spring:
   application:
-    name: eurka-server
-    
+    name: microservice-eurka-server
+  security:
+    user:
+      name: admin
+      password: pass1234
 eureka:
   instance:
     hostname: localhost
   client:
+    register-with-eureka: false #是否向服务注册中心注册自己
+    fetch-registry: false #是否检索服务
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/   
+     defaultZone: http://admin:pass1234@${eureka.instance.hostname}:${server.port}/eureka/
+     #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    healthcheck:
+      enabled: true
