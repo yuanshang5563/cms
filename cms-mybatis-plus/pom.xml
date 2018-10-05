@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 
@@ -10,10 +11,10 @@
 	</parent>
 
 	<groupId>org.ys.cms</groupId>
-	<artifactId>core-user</artifactId>
+	<artifactId>cms-mybatis-plus</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>core-user</name>
+	<name>cms-mybatis-plus</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -22,28 +23,30 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		</dependency>	
-		<dependency>
-			<groupId>org.ys.cms</groupId>
-			<artifactId>cms-commons</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>	
-		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
-		</dependency>		
+		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
 		<dependency>
 			<groupId>com.baomidou</groupId>
 			<artifactId>mybatis-plus-boot-starter</artifactId>
 			<version>2.2.0</version>
-		</dependency> 			
+		</dependency> 
+		
+		<!-- freemarker -->
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+		</dependency>        
+		
+		<!-- fastjson -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.15</version>
+		</dependency>
+
 	</dependencies>
 </project>
