@@ -11,6 +11,8 @@
         <result column="phone" property="phone" />
         <result column="birthday" property="birthday" />
         <result column="comment_info" property="commentInfo" />
+        <result column="created_time" property="createdTime" />
+        <result column="modified_time" property="modifiedTime" />
     </resultMap>
 
 </mapper>

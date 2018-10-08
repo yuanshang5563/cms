@@ -12,9 +12,10 @@ eureka:
     hostname: localhost
   client:
     register-with-eureka: false #是否向服务注册中心注册自己
-    fetch-registry: false #是否检索服务
+    fetch-registry: true #是否检索服务
     serviceUrl:
      defaultZone: http://admin:pass1234@${eureka.instance.hostname}:${server.port}/eureka/
      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-    healthcheck:
-      enabled: true
+  #server:
+    #enable-self-preservation: false #设为false，关闭自我保护
+    #eviction-interval-timer-in-ms: 5000 # 清理间隔（单位毫秒，默认是60*1000）

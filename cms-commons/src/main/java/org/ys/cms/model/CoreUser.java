@@ -36,6 +36,12 @@ public class CoreUser extends Model<CoreUser> {
 
     @TableField("comment_info")
     private String commentInfo;
+    
+    @TableField("created_time")
+    private Date createdTime;
+    
+    @TableField("modified_time")
+    private Date modifiedTime;    
 
     public String getCoreUserId() {
         return coreUserId;
@@ -88,7 +94,23 @@ public class CoreUser extends Model<CoreUser> {
         this.commentInfo = commentInfo;
     }
 
-    @Override
+    public Date getCreatedTime() {
+		return createdTime;
+	}
+
+	public void setCreatedTime(Date createdTime) {
+		this.createdTime = createdTime;
+	}
+
+	public Date getModifiedTime() {
+		return modifiedTime;
+	}
+
+	public void setModifiedTime(Date modifiedTime) {
+		this.modifiedTime = modifiedTime;
+	}
+
+	@Override
     protected Serializable pkVal() {
         return this.coreUserId;
     }
@@ -103,6 +125,8 @@ public class CoreUser extends Model<CoreUser> {
         ", phone=" + phone +
         ", birthday=" + birthday +
         ", commentInfo=" + commentInfo +
+        ", createdTime=" + createdTime +
+        ", modifiedTime=" + modifiedTime +
         "}";
     }
 }
