@@ -25,6 +25,7 @@
 		<module>cms-mybatis-plus</module>
 		<module>cms-log</module>
 		<module>cms-turbine</module>
+		<module>cms-zuul</module>
 	</modules>
 
 	<properties>

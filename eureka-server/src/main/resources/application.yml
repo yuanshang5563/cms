@@ -12,7 +12,7 @@ eureka:
     hostname: localhost
   client:
     register-with-eureka: false #是否向服务注册中心注册自己
-    #fetch-registry: true #是否检索服务    
+    fetch-registry: false #是否检索服务    
     serviceUrl:
      defaultZone: http://admin:pass1234@${eureka.instance.hostname}:${server.port}/eureka/
   #server:
