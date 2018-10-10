@@ -17,17 +17,20 @@ spring:
 mybatis-plus:
   mapper-locations: classpath:/mapper/*.xml
   type-aliases-package: org.ys.cms.model
-feign:
-  hystrix:
-    enable: true  
 eureka:
   instance:
+    prefer-ip-address: true
     instance-id: ${spring.cloud.client.ip-address}:${server.port}:${spring.application.name}
   client:
+    register-with-eureka: true #是否向服务注册中心注册自己
+    fetch-registry: true #是否检索服务  
+    #healthcheck:
+      #enable: true
     service-url:
       defaultZone: http://admin:pass1234@localhost:8761/eureka/
-    fetchRegistry: true
-   
+feign:
+  hystrix:
+    enable: true     
 ribbon:  
   ReadTimeout: 60000  
   ConnectTimeout: 60000

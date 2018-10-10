@@ -17,12 +17,14 @@ public interface CmsLogFeignClient {
 	@RequestMapping(value = "/CmsLogController/cmsLog/{cmsLogId}", method = RequestMethod.GET)
 	public CmsLog getCmsLog(@PathVariable("cmsLogId") String cmsLogId);
 	
-//	@RequestMapping(value = "/CmsLogController/cmsLog", method = RequestMethod.POST)
-//	public void postCmsLog(@RequestBody CmsLog cmsLog);
-//	
-//	@RequestMapping(value = "/CmsLogController/cmsLog", method = RequestMethod.PUT)
-//	public void putCmsLog(@RequestBody CmsLog cmsLog);
-//	
-//	@RequestMapping(value = "/CmsLogController/cmsLog/{cmsLogId}", method = RequestMethod.DELETE)
-//	public void deleteCmsLog(@PathVariable("cmsLogId") String cmsLogId);
+	@RequestMapping(value = "/CmsLogController/cmsLog", method = RequestMethod.POST)
+	public void postCmsLog(@RequestBody CmsLog cmsLog);
+	
+	@RequestMapping(value = "/CmsLogController/cmsLog", method = RequestMethod.PUT)
+	public void putCmsLog(@RequestBody CmsLog cmsLog);
+	
+	@RequestMapping(value = "/CmsLogController/cmsLog/{cmsLogId}", method = RequestMethod.DELETE)
+	public void deleteCmsLog(@PathVariable("cmsLogId") String cmsLogId);
 }
+
+

@@ -10,10 +10,10 @@
 	</parent>
 
 	<groupId>org.ys.cms</groupId>
-	<artifactId>core-user</artifactId>
+	<artifactId>cms-turbine</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>core-user</name>
+	<name>cms-turbine</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -24,43 +24,31 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>	
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>	
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+<!-- 		<dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+		</dependency> -->				
+		<dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
 		</dependency>
 		<dependency>
 		    <groupId>org.springframework.cloud</groupId>
-		    <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>	
-		<dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>			
-		<dependency>
-			<groupId>org.ys.cms</groupId>
-			<artifactId>cms-commons</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>	
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
+		    <artifactId>spring-cloud-starter-netflix-turbine</artifactId>
 		</dependency>		
-		<!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
-		<dependency>
-			<groupId>com.baomidou</groupId>
-			<artifactId>mybatis-plus-boot-starter</artifactId>
-			<version>2.2.0</version>
-		</dependency> 
+<!-- 		<dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-starter-netflix-turbine-stream</artifactId>
+		</dependency>	 -->								
 	</dependencies>
 	
 	<build>

@@ -24,6 +24,7 @@
 		<module>cms-commons</module>
 		<module>cms-mybatis-plus</module>
 		<module>cms-log</module>
+		<module>cms-turbine</module>
 	</modules>
 
 	<properties>
