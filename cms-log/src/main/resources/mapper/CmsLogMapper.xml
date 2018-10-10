@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.ys.cms.dao.CmsLogMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="org.ys.cms.model.CmsLog">
+        <id column="cms_log_id" property="cmsLogId" />
+        <result column="log_type" property="logType" />
+        <result column="created_time" property="createdTime" />
+        <result column="modified_time" property="modifiedTime" />
+        <result column="module" property="module" />
+        <result column="user" property="user" />
+        <result column="ip_address" property="ipAddress" />
+        <result column="log_info" property="logInfo" />
+    </resultMap>
+
+</mapper>
