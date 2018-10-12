@@ -1,0 +1,42 @@
+server:
+  port: 9300
+spring:
+  application:
+    name: microservice-cms-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/yuanshang5563/cms_config #git 仓库的地址
+          username: yuanshang5563 #git 仓库的账号密码
+          password: '{cipher}ff85342472f2e97b304f26b77ace49ce25e49fc6398df7cc711454bba91d6c56'
+  rabbitmq: 
+    host: localhost
+    port: 5672
+    virtual-host: /
+    username: guest
+    password: guest    
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}:${spring.application.name}
+    #hostname: ${spring.cloud.client.ip-address}
+    #lease-renewal-interval-in-seconds: 10 # 每隔10s发送一次心跳
+    #lease-expiration-duration-in-seconds: 30 # 告知服务端30秒还未收到心跳的话，就将该服务移除列表
+  client:
+    register-with-eureka: true #是否向服务注册中心注册自己
+    fetch-registry: true #是否检索服务  
+    #healthcheck:
+      #enable: true   
+    service-url:
+      defaultZone: http://admin:pass1234@localhost:8761/eureka/
+
+#logging:
+#  level:
+#    org.springframework.cloud: debug
+#    org.springframework.boot: debug
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

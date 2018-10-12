@@ -1,45 +1,8 @@
 server:
   port: 9100
-spring:
-  application:
-    name: microservice-cms-log
-  datasource:
-    url: jdbc:mysql://localhost:3306/cms?useUnicode=true&characterEncoding=utf8
-    username: root
-    password: root
-    driver-class-name: com.mysql.jdbc.Driver
-    dbcp2:
-      max-idle: 10
-      max-wait-millis: 10000
-      min-idle: 5
-      initial-size: 5
-#mybatis-plus
-mybatis-plus:
-  mapper-locations: classpath:/mapper/*.xml
-  type-aliases-package: org.ys.cms.model
-eureka:
-  instance:
-    prefer-ip-address: true
-    instance-id: ${spring.cloud.client.ip-address}:${server.port}:${spring.application.name}
-    #hostname: ${spring.cloud.client.ip-address}
-    #lease-renewal-interval-in-seconds: 10 # 每隔10s发送一次心跳
-    #lease-expiration-duration-in-seconds: 30 # 告知服务端30秒还未收到心跳的话，就将该服务移除列表
-  client:
-    register-with-eureka: true #是否向服务注册中心注册自己
-    fetch-registry: true #是否检索服务  
-    #healthcheck:
-      #enable: true   
-    service-url:
-      defaultZone: http://admin:pass1234@localhost:8761/eureka/
-      
+  
 #springboot2.0. 的配置项为：
 #actuator端口
 management:
   server:
     port: 9100
-  endpoints:
-    web:
-      base-path: / #修改访问路径  2.0之前默认是/   2.0默认是 /actuator  可以通过这个属性值修改
-      exposure:
-        include: '*'  #开放所有页面节点  默认只开启了health、info两个节点          
-      

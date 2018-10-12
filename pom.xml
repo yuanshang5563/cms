@@ -26,6 +26,8 @@
 		<module>cms-log</module>
 		<module>cms-turbine</module>
 		<module>cms-zuul</module>
+		<module>cms-file</module>
+		<module>cms-config-server</module>
 	</modules>
 
 	<properties>
@@ -36,11 +38,11 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
+<!-- 		<dependency>
 	        <groupId>org.springframework.boot</groupId>
 	        <artifactId>spring-boot-devtools</artifactId>
 	        <optional>true</optional>
-		</dependency>		
+		</dependency> -->		
 	</dependencies>
 
 	<dependencyManagement>

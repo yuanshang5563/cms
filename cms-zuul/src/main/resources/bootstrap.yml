@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    config:
+     name: microservice-cms-zuul,bus-common
+     #uri: http://127.0.0.1:8071
+     profile: dev
+     label: master
+     discovery:
+      enabled: true
+      serviceId: microservice-cms-config-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:pass1234@localhost:8761/eureka/
