@@ -19,8 +19,8 @@
 	</parent>
 	
 	<modules>
-		<module>core-user</module>
-		<module>eureka-server</module>
+		<module>cms-core-user</module>
+		<module>cms-eureka-server</module>
 		<module>cms-commons</module>
 		<module>cms-mybatis-plus</module>
 		<module>cms-log</module>

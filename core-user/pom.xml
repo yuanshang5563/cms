@@ -10,11 +10,11 @@
 	</parent>
 
 	<groupId>org.ys.cms</groupId>
-	<artifactId>core-user</artifactId>
+	<artifactId>cms-core-user</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>core-user</name>
+	<name>cms-core-user</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -54,6 +54,11 @@
 		<dependency>
 		    <groupId>org.springframework.cloud</groupId>
 		    <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+		</dependency>		
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-lang3</artifactId>
+		    <version>3.8.1</version>
 		</dependency>					
 		<dependency>
 			<groupId>org.ys.cms</groupId>

@@ -10,10 +10,10 @@
 	</parent>
 	
 	<groupId>org.ys.cms</groupId>
-	<artifactId>eureka-server</artifactId>
+	<artifactId>cms-eureka-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	
-	<name>eureka-server</name>
+	<name>cms-eureka-server</name>
 	<url>http://maven.apache.org</url>
 	
 	<properties>
